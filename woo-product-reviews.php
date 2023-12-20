@@ -17,8 +17,8 @@
    * Define
    */
   define('WPR_VERSION', '1.0.0');
-  define('WPR_URI', '1.0.0');
-  define('WPR_DIR', '1.0.0');
+  define('WPR_URI', plugin_dir_url(__FILE__));
+  define('WPR_DIR', plugin_dir_path(__FILE__));
 }
 
 {

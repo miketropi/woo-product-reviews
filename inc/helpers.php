@@ -1,0 +1,8 @@
+<?php 
+/**
+ * Helpers
+ */
+
+function wpr_load_template($name, $require_once = false) {
+  load_template(WPR_DIR . '/templates/' . $name . '.php', $require_once);
+}
