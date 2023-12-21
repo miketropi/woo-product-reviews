@@ -23,4 +23,4 @@ if ( ! comments_open() ) {
       do_action('WPR_REVIEW:TEMPLATE', $product); 
     ?>
   </div>
-</div>
+</div> <!-- #WPR_REVIEW -->

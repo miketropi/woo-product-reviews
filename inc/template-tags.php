@@ -48,6 +48,6 @@ function wpr_rating_buttons_tag($product) {
     <?php echo $button['name']; ?>
   </a>
   <?php
-  echo '</div> <!-- .wpr-review-wrap__buttons -->';
   }
+  echo '</div>';
 }
