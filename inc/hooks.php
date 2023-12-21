@@ -11,3 +11,5 @@ function wpr_override_wc_comment_template($path) {
   } 
   return $path;
 }
+
+add_action('WPR_REVIEW:TEMPLATE', 'wpr_rating_heading_information_tag', 10);
