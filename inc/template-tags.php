@@ -15,9 +15,24 @@ function wpr_rating_heading_information_tag($product) {
 }
 
 function wpr_rating_info_tag($product) {
+  $count = $product->get_rating_count();
+  $average = $product->get_average_rating();
+  $rating_1 = $product->get_rating_count(1);
+  $rating_2 = $product->get_rating_count(2);
+  $rating_3 = $product->get_rating_count(3);
+  $rating_4 = $product->get_rating_count(4);
+  $rating_5 = $product->get_rating_count(5);
   ?>
   <div class="wpr-review-wrap__rating-info">
-    
+    <?php print_r([
+      'count' => $count,
+      'average' => $average,
+      'rating_1' => $rating_1,
+      'rating_2' => $rating_2,
+      'rating_3' => $rating_3,
+      'rating_4' => $rating_4,
+      'rating_5' => $rating_5,
+    ]); ?>
   </div>
   <?php
 }
