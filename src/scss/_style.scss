@@ -1,0 +1,25 @@
+.wpr-starts {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+
+  svg {
+    fill: #d0d0d0;
+    width: 22px;
+    margin: 0 2px;
+  } 
+
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    text-wrap: nowrap;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: calc((var(--average)/5) * 100%);
+
+    svg {
+      fill: var(--wpr-start-active-color);
+    }
+  }
+}

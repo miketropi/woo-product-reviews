@@ -33,6 +33,27 @@ function wpr_rating_info_tag($product) {
       'rating_4' => $rating_4,
       'rating_5' => $rating_5,
     ]); ?>
+    <div class="wpr-review-wrap__rating-info-average">
+      <div class="__average"><?php echo sprintf('%s / 5', $product->get_average_rating()) ?></div>
+      <?php echo wpr_starts($product->get_average_rating()); ?>
+      <div class="__count">(<?php echo printf(_n('%s Review', '%s Reviews', 1, 'woo-product-reviews'), 1); ?>)</div>
+    </div>
+  </div>
+  <?php
+}
+
+function wpr_starts($average = 0) {
+  $count = 5;
+  ?>
+  <div class="wpr-starts">
+    <?php for($i = 1; $i <= $count; $i++) :  
+      echo wpr_icon('start');
+    endfor; ?>
+    <div class="wpr-starts__overlay" style="--average:<?php echo $average; ?>;">
+      <?php for($i = 1; $i <= $count; $i++) :  
+        echo wpr_icon('start');
+      endfor; ?>
+    </div>
   </div>
   <?php
 }
